@@ -1,0 +1,255 @@
+/* General Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Uncial Antiqua', serif;
+    background-color: #2e2e2e; /* Dark grey for the background */
+    color: #e0e0e0; /* Light grey for text */
+    text-align: center;
+    overflow-x: hidden; /* Prevent horizontal scrolling, but allow vertical */
+    min-height: 110vh; /* Allow some vertical scrolling */
+    position: relative;
+}
+
+/* Cosmic Background Layers */
+#cosmic-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2; /* Behind all other elements */
+    overflow: hidden;
+}
+
+.mist-layer {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 10%, transparent 70%);
+    animation: swirl 60s infinite linear;
+    opacity: 0.4;
+}
+
+@keyframes swirl {
+    from {
+        transform: translateX(0) rotate(0deg);
+    }
+    to {
+        transform: translateX(-30%) rotate(360deg);
+    }
+}
+
+.starry-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('path/to/starry-background.png') repeat;
+    opacity: 0.3;
+    animation: twinkle 10s infinite alternate;
+}
+
+@keyframes twinkle {
+    from { opacity: 0.3; }
+    to { opacity: 0.5; }
+}
+
+.cosmic-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 10%, transparent 60%);
+    animation: pulse 5s infinite alternate;
+}
+
+@keyframes pulse {
+    from { opacity: 0.2; }
+    to { opacity: 0.5; }
+}
+
+/* Header Styling */
+header {
+    margin-top: 20px;
+    font-size: 3.5em;
+    color: #fff;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.6), 0px 0px 20px rgba(255, 87, 34, 0.8);
+    position: relative;
+    z-index: 1;
+}
+
+#main-title {
+    font-family: 'Cinzel Decorative', serif;
+}
+
+.highlight {
+    color: #ffa726;
+    text-shadow: 0px 0px 10px rgba(255, 87, 34, 0.8), 0px 0px 20px rgba(255, 140, 0, 0.6);
+}
+
+/* Paragraph Section */
+#welcome-message {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    width: 75%;
+    color: #e0e0e0;
+    font-size: 1.3em;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.1);
+    z-index: 1;
+    position: relative;
+}
+
+#welcome-message p {
+    line-height: 1.5em;
+}
+
+/* Button Styling */
+#button-container {
+    margin-top: 50px;
+    z-index: 1;
+    position: relative;
+}
+
+#random-button {
+    background-color: #FF5722;
+    color: #fff;
+    padding: 20px 50px;
+    font-size: 1.3em;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(255, 87, 34, 0.8);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-radius 0.3s ease;
+}
+
+#random-button:hover {
+    background-color: #e64a19;
+    box-shadow: 0px 0px 25px rgba(255, 87, 34, 1);
+}
+
+#random-button:active {
+    transform: scale(0.95);
+    border-radius: 50%; /* Changes shape when clicked */
+}
+
+/* Floating Shapes */
+#floating-shapes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.shape {
+    fill: rgba(255, 255, 255, 0.2);
+    stroke: rgba(255, 255, 255, 0.3);
+    stroke-width: 1px;
+    position: absolute;
+    animation: float 20s infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.8;
+    }
+    50% {
+        transform: translateY(-20px) rotate(180deg);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(0) rotate(360deg);
+        opacity: 0.8;
+    }
+}
+
+/* Positioning the shapes */
+.triangle {
+    top: 20%;
+    left: 10%;
+    width: 50px;
+    height: 50px;
+}
+
+.star {
+    top: 50%;
+    left: 80%;
+    width: 70px;
+    height: 70px;
+}
+
+.diamond {
+    top: 70%;
+    left: 30%;
+    width: 60px;
+    height: 60px;
+}
+
+/* Decorative Lines */
+.decorative-lines {
+    position: absolute;
+    bottom: 10%;
+    width: 100%;
+    z-index: 1;
+}
+
+.glowing-line {
+    border: none;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.2), rgba(255, 87, 34, 0.8), rgba(255, 255, 255, 0.2));
+    margin: 10px auto;
+    width: 60%;
+    animation: glow 3s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        opacity: 0.5;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Footer Styling */
+footer {
+    color: #e0e0e0;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0px 0px 15px rgba(255, 87, 34, 0.8);
+    z-index: 1;
+}
+
+/* Pulsating effect for the button */
+.pulse-effect {
+    animation: pulseAnimation 1.5s infinite;
+}
+
+@keyframes pulseAnimation {
+    0% {
+        box-shadow: 0px 0px 15px rgba(255, 87, 34, 0.8);
+        transform: scale(1);
+    }
+    50% {
+        box-shadow: 0px 0px 30px rgba(255, 87, 34, 1);
+        transform: scale(1.05);
+    }
+    100% {
+        box-shadow: 0px 0px 15px rgba(255, 87, 34, 0.8);
+        transform: scale(1);
+    }
+}
