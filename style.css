@@ -3,12 +3,39 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Uncial Antiqua', serif;
-    background-color: #2e2e2e; /* Dark grey for the background */
-    color: #e0e0e0; /* Light grey for text */
+    background-color: #2e2e2e;
+    color: #e0e0e0;
     text-align: center;
-    overflow-x: hidden; /* Prevent horizontal scrolling, but allow vertical */
-    min-height: 110vh; /* Allow some vertical scrolling */
+    overflow-x: hidden;
     position: relative;
+    padding-top: 60px; /* Adjust padding to account for the navigation bar */
+}
+
+/* Navigation Menu Styling */
+#navigation-menu {
+    background-color: #2e2e2e;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100; /* Make sure it appears above other elements */
+    border-bottom: 2px solid #FFD700; /* Golden border */
+}
+
+#navigation-menu a {
+    font-family: 'Cinzel Decorative', serif;
+    color: #FFD700; /* Golden color */
+    text-decoration: none;
+    margin: 0 20px;
+    padding: 10px 15px;
+    display: inline-block;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+#navigation-menu a:hover {
+    color: #fff;
+    background-color: rgba(255, 215, 0, 0.2); /* Hover effect */
 }
 
 /* Cosmic Background Layers */
@@ -75,7 +102,7 @@ body {
 
 /* Header Styling */
 header {
-    margin-top: 20px;
+    margin-top: 80px; /* Adjust margin to ensure it doesn't overlap with navigation */
     font-size: 3.5em;
     color: #fff;
     text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.6), 0px 0px 20px rgba(255, 87, 34, 0.8);
