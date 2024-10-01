@@ -7,8 +7,10 @@ body {
     color: #e0e0e0;
     text-align: center;
     overflow-x: hidden;
+    overflow-y: auto; /* Ensure vertical scrolling is allowed */
     position: relative;
-    padding-top: 60px; /* Adjust padding to account for the navigation bar */
+    min-height: 130vh; /* Increased height to accommodate scrolling */
+    padding-top: 70px; /* Adjust padding to account for the fixed navigation bar */
 }
 
 /* Navigation Menu Styling */
