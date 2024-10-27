@@ -105,7 +105,7 @@ body {
 /* Header Styling */
 header {
     margin-top: 80px; /* Adjust margin to ensure it doesn't overlap with navigation */
-    font-size: 3.5em;
+    font-size: 3em;
     color: #fff;
     text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.6), 0px 0px 20px rgba(255, 87, 34, 0.8);
     position: relative;
