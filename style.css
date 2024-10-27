@@ -561,3 +561,33 @@ footer {
     cursor: not-allowed;
     box-shadow: none;
 }
+
+/* Thank You Container */
+.thank-you-container {
+    margin-top: 150px;
+    text-align: center;
+    color: #e0e0e0;
+    font-family: 'Uncial Antiqua', serif;
+    position: relative;
+    z-index: 1;
+}
+
+.thank-you-container h1 {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 3em;
+    color: #fff;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.6),
+                 0px 0px 20px rgba(255, 87, 34, 0.8);
+    margin-bottom: 30px;
+}
+
+.thank-you-container p {
+    font-size: 1.5em;
+    line-height: 1.6em;
+}
+
+.thank-you-container .highlight {
+    color: #ffa726;
+    text-shadow: 0px 0px 10px rgba(255, 87, 34, 0.8),
+                 0px 0px 20px rgba(255, 140, 0, 0.6);
+}
