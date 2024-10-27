@@ -131,9 +131,6 @@ document.addEventListener('DOMContentLoaded', () => {
             // Disable the submit button to prevent multiple submissions
             submitButton.disabled = true;
 
-            // Show a loading indicator or change button text if desired
-            submitButton.textContent = 'Submitting...';
-
             // Prepare the template parameters
             const templateParams = {
                 email: emailInput.value
@@ -150,22 +147,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 // Clear the input field
                 emailInput.value = '';
-
-                // Remove the animation class after a delay
-                setTimeout(() => {
-                    submitButton.classList.remove('submitted');
-                    emailInput.classList.remove('submitted');
-                }, 2000);
-
-                // Redirect to Thank You page after a delay (optional)
-                setTimeout(() => {
-                    window.location.href = 'thankyou.html';
-                }, 200); // Adjust the delay as needed
+                
+                // Redirect to Thank You page immediately
+                window.location.href = 'thankyou.html';
             }, (error) => {
                 console.log('FAILED...', error);
-                document.getElementById('error-message').style.display = 'block';
+                // Remove error message visibility
+                document.getElementById('error-message').style.display = 'none';
                 submitButton.disabled = false;
-                submitButton.textContent = 'Submit';
             });
         });
     }
