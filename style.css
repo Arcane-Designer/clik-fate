@@ -324,7 +324,7 @@ header {
 footer {
     color: #e0e0e0;
     background-color: rgba(0, 0, 0, 0.6);
-    padding: 1px 0; /* Reduced padding */
+    padding: 9px 0; /* Reduced padding */
     position: fixed;
     bottom: 0;
     width: 98%; /* Changed from 100% to 50% */
