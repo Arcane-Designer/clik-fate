@@ -48,7 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
             "https://www.youtube.com/watch?v=qybUFnY7Y8w",
             "https://www.youtube.com/watch?v=MejbOFk7H6c",
             "https://www.youtube.com/watch?v=QvW61K2s0tA",
-            "https://www.youtube.com/watch?v=LgmxMuW6Fsc"
         ];
 
         // Array of subtle shape transformations
