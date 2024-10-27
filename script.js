@@ -146,7 +146,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }, (error) => {
                 console.log('FAILED...', error);
                 // Remove error message visibility
-                document.getElementById('error-message').style.display = 'none';
                 submitButton.disabled = false;
             });
         });
