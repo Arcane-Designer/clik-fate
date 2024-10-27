@@ -336,6 +336,12 @@ footer {
     z-index: 1;
 }
 
+@media screen and (max-width: 600px) {
+    footer {
+        width: 80%; /* Increase width on small screens */
+    }
+}
+
 /* Pulsating effect for the button */
 .pulse-effect {
     animation: pulseAnimation 1.5s infinite;
