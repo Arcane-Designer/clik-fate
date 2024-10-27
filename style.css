@@ -326,7 +326,6 @@ footer {
     color: #e0e0e0;
     background-color: rgba(0, 0, 0, 0.6);
     padding: 10px;
-    position: static;
     bottom: 0;
     width: 50%; /* Changed from 100% to 50% */
     margin: 20px auto;
