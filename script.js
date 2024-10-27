@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
             };
 
             // Send email using EmailJS
-            emailjs.send('service_olkx64w', 'template_rb9tsjs', templateParams)
+            emailjs.send('service_olkx64w', 'template_wx7drme', templateParams)
             .then((response) => {
                 console.log('SUCCESS!', response.status, response.text);
 
