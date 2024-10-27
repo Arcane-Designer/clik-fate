@@ -151,22 +151,28 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     // **NEW CODE ENDS HERE**
 
-    // Email Submission Functionality
+    // **Email Submission Functionality**
     const joinForm = document.getElementById('join-form');
     const emailInput = document.getElementById('email-input');
     const submitButton = document.getElementById('submit-button');
-    
+
     if (joinForm && emailInput && submitButton) {
         joinForm.addEventListener('submit', (e) => {
             e.preventDefault(); // Prevent actual form submission
-    
+
             // Disable the submit button to prevent multiple submissions
             submitButton.disabled = true;
-    
-            // Send email using EmailJS
-            emailjs.send('service_olkx64w', 'template_rb9tsjs', {
+
+            // Show a loading indicator or change button text if desired
+            submitButton.textContent = 'Submitting...';
+
+            // Prepare the template parameters
+            const templateParams = {
                 email: emailInput.value
-            })
+            };
+
+            // Send email using EmailJS
+            emailjs.send('service_olkx64w', 'template_rb9tsjs', templateParams)
             .then((response) => {
                 console.log('SUCCESS!', response.status, response.text);
                 // Redirect to Thank You page
@@ -175,6 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.log('FAILED...', error);
                 alert('An error occurred while submitting the form. Please try again.');
                 submitButton.disabled = false;
+                submitButton.textContent = 'Submit';
             });
         });
     }
