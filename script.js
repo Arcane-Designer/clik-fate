@@ -7,11 +7,48 @@ document.addEventListener('DOMContentLoaded', () => {
     if (randomButton && clickSound) {
         // Sites to choose from (adding variety)
         const sites = [
+            // Existing sites
             "https://www.coolmathgames.com/",
             "https://www.nytimes.com/games/wordle/index.html",
             "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
             "https://www.youtube.com/@AIMonday",
-            "https://www.youtube.com"
+            "https://www.youtube.com",
+
+            // New sites
+            "https://www.harrypotter.com/sorting-hat",
+            "https://theuselessweb.com",
+            "https://www.geoguessr.com",
+            "https://littlealchemy2.com",
+            "https://patatap.com",
+            "https://thisissand.com",
+            "http://www.staggeringbeauty.com",
+            "https://pointerpointer.com",
+            "https://quickdraw.withgoogle.com",
+            "http://weavesilk.com",
+            "https://cat-bounce.com",
+            "http://www.pixelthoughts.co",
+            "https://www.linerider.com",
+            "https://www.boredbutton.com/random",
+            "https://science.nasa.gov/eyes/",
+            "https://stars.chromeexperiments.com",
+            "https://stellarium-web.org",
+            "https://www.youtube.com/watch?v=nGeKSiCQkPw",
+            "https://www.youtube.com/watch?v=dMH0bHeiRNg",
+            "https://www.youtube.com/user/BadLipReading",
+            "https://www.youtube.com/watch?v=MtN1YnoL46Q",
+            "https://www.youtube.com/playlist?list=PL3A5849BDE0581B19",
+            "https://www.youtube.com/watch?v=IvUU8joBb1Q",
+            "https://www.youtube.com/watch?v=jNQXAC9IVRw",
+            "https://www.youtube.com/watch?v=LACbVhgtx9I",
+            "https://www.youtube.com/watch?v=9bZkp7q19f0",
+            "https://www.youtube.com/channel/UCcMDMoNu66_1Hwi5-MeiQgw",
+            "https://www.youtube.com/watch?v=Tx1XIm6q4r4",
+            "https://www.youtube.com/watch?v=qnydFmqHuVo",
+            "https://www.youtube.com/watch?v=u1ZB_rGFyeU",
+            "https://www.youtube.com/watch?v=qybUFnY7Y8w",
+            "https://www.youtube.com/watch?v=MejbOFk7H6c",
+            "https://www.youtube.com/watch?v=QvW61K2s0tA",
+            "https://www.youtube.com/watch?v=LgmxMuW6Fsc"
         ];
 
         // Array of subtle shape transformations
