@@ -118,4 +118,38 @@ document.addEventListener('DOMContentLoaded', () => {
             randomButton.classList.toggle('pulse-effect'); // Toggle pulsating effect every few seconds
         }, 2000); // Every 2 seconds
     }
+
+    // **NEW CODE STARTS HERE**
+    // Email Submission Functionality
+    const joinForm = document.getElementById('join-form');
+    const emailInput = document.getElementById('email-input');
+    const submitButton = document.getElementById('submit-button');
+
+    if (joinForm && emailInput && submitButton) {
+        joinForm.addEventListener('submit', (e) => {
+            e.preventDefault(); // Prevent actual form submission
+
+            // Add animation class
+            submitButton.classList.add('submitted');
+            emailInput.classList.add('submitted');
+
+            // Optional: Display a thank you message
+            const thankYouMessage = document.createElement('p');
+            thankYouMessage.classList.add('thank-you-message');
+            thankYouMessage.innerText = 'Thank you for joining the Clik Clique!';
+            joinForm.parentNode.insertBefore(thankYouMessage, joinForm.nextSibling);
+
+            // Clear the input field
+            emailInput.value = '';
+
+            // Remove the animation class after a delay
+            setTimeout(() => {
+                submitButton.classList.remove('submitted');
+                emailInput.classList.remove('submitted');
+            }, 2000);
+        });
+    }
+    // **NEW CODE ENDS HERE**
+});
+    
 });
