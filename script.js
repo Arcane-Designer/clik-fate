@@ -150,4 +150,33 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     // **NEW CODE ENDS HERE**
+
+    // Email Submission Functionality
+    const joinForm = document.getElementById('join-form');
+    const emailInput = document.getElementById('email-input');
+    const submitButton = document.getElementById('submit-button');
+    
+    if (joinForm && emailInput && submitButton) {
+        joinForm.addEventListener('submit', (e) => {
+            e.preventDefault(); // Prevent actual form submission
+    
+            // Disable the submit button to prevent multiple submissions
+            submitButton.disabled = true;
+    
+            // Send email using EmailJS
+            emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
+                email: emailInput.value
+            })
+            .then((response) => {
+                console.log('SUCCESS!', response.status, response.text);
+                // Redirect to Thank You page
+                window.location.href = 'thankyou.html';
+            }, (error) => {
+                console.log('FAILED...', error);
+                alert('An error occurred while submitting the form. Please try again.');
+                submitButton.disabled = false;
+            });
+        });
+    }
+    
 });
