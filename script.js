@@ -119,39 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 2000); // Every 2 seconds
     }
 
-    // **NEW CODE STARTS HERE**
     // Email Submission Functionality
-    const joinForm = document.getElementById('join-form');
-    const emailInput = document.getElementById('email-input');
-    const submitButton = document.getElementById('submit-button');
-
-    if (joinForm && emailInput && submitButton) {
-        joinForm.addEventListener('submit', (e) => {
-            e.preventDefault(); // Prevent actual form submission
-
-            // Add animation class
-            submitButton.classList.add('submitted');
-            emailInput.classList.add('submitted');
-
-            // Optional: Display a thank you message
-            const thankYouMessage = document.createElement('p');
-            thankYouMessage.classList.add('thank-you-message');
-            thankYouMessage.innerText = 'Thank you for joining the Clik Clique!';
-            joinForm.parentNode.insertBefore(thankYouMessage, joinForm.nextSibling);
-
-            // Clear the input field
-            emailInput.value = '';
-
-            // Remove the animation class after a delay
-            setTimeout(() => {
-                submitButton.classList.remove('submitted');
-                emailInput.classList.remove('submitted');
-            }, 2000);
-        });
-    }
-    // **NEW CODE ENDS HERE**
-
-    // **Email Submission Functionality**
     const joinForm = document.getElementById('join-form');
     const emailInput = document.getElementById('email-input');
     const submitButton = document.getElementById('submit-button');
@@ -175,8 +143,24 @@ document.addEventListener('DOMContentLoaded', () => {
             emailjs.send('service_olkx64w', 'template_rb9tsjs', templateParams)
             .then((response) => {
                 console.log('SUCCESS!', response.status, response.text);
-                // Redirect to Thank You page
-                window.location.href = 'thankyou.html';
+
+                // Add animation class
+                submitButton.classList.add('submitted');
+                emailInput.classList.add('submitted');
+
+                // Clear the input field
+                emailInput.value = '';
+
+                // Remove the animation class after a delay
+                setTimeout(() => {
+                    submitButton.classList.remove('submitted');
+                    emailInput.classList.remove('submitted');
+                }, 2000);
+
+                // Redirect to Thank You page after a delay (optional)
+                setTimeout(() => {
+                    window.location.href = 'thankyou.html';
+                }, 200); // Adjust the delay as needed
             }, (error) => {
                 console.log('FAILED...', error);
                 document.getElementById('error-message').style.display = 'block';
