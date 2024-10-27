@@ -151,5 +151,3 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     // **NEW CODE ENDS HERE**
 });
-    
-});
