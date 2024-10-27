@@ -194,13 +194,25 @@ header {
     z-index: -1;
 }
 
+/* Styles for the shapes */
 .shape {
     fill: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.2); /* For swirls using 'currentColor' */
     stroke: rgba(255, 255, 255, 0.3);
     stroke-width: 1px;
     position: absolute;
     animation: float 20s infinite;
 }
+
+/* Existing shapes */
+.triangle { /* No need for positioning here */ }
+.star { /* No need for positioning here */ }
+.diamond { /* No need for positioning here */ }
+
+/* New shapes */
+.circle { /* Styling will be applied dynamically */ }
+.hexagon { /* Styling will be applied dynamically */ }
+.swirl { /* Styling will be applied dynamically */ }
 
 @keyframes float {
     0% {
@@ -218,6 +230,8 @@ header {
 }
 
 /* Positioning the shapes */
+
+/* Existing shapes */
 .triangle {
     top: 20%;
     left: 10%;
@@ -235,6 +249,48 @@ header {
 .diamond {
     top: 70%;
     left: 30%;
+    width: 60px;
+    height: 60px;
+}
+
+/* New shapes */
+
+/* Hexagon */
+.hexagon {
+    top: 30%;
+    left: 25%;
+    width: 60px;
+    height: 60px;
+}
+
+/* Swirl 1 */
+.swirl1 {
+    top: 10%;
+    left: 60%;
+    width: 80px;
+    height: 80px;
+}
+
+/* Swirl 2 */
+.swirl2 {
+    top: 65%;
+    left: 50%;
+    width: 70px;
+    height: 70px;
+}
+
+/* Circle */
+.circle {
+    top: 50%;
+    left: 40%;
+    width: 50px;
+    height: 50px;
+}
+
+/* Second Star */
+.star2 {
+    top: 80%;
+    left: 70%;
     width: 60px;
     height: 60px;
 }
