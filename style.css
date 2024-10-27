@@ -282,3 +282,74 @@ footer {
         transform: scale(1);
     }
 }
+
+/* Content Container */
+.content-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 100px auto 50px; /* Adjust margins as needed */
+    width: 85%;
+    max-width: 1200px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Image Placeholder */
+.image-placeholder {
+    width: 40%;
+    height: 500px; /* Adjust height as needed */
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px dashed #FFD700; /* Golden dashed border */
+    border-radius: 10px;
+    margin-right: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-placeholder::after {
+    content: "Image Placeholder";
+    color: #FFD700;
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 1.5em;
+}
+
+/* About Us Section */
+.about-us {
+    width: 55%;
+    color: #e0e0e0;
+    font-family: 'Uncial Antiqua', serif;
+}
+
+.about-us h1 {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 2.5em;
+    color: #fff;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.6);
+    margin-bottom: 20px;
+}
+
+.about-us p {
+    font-size: 1.2em;
+    line-height: 1.6em;
+}
+
+/* Adjustments for Smaller Screens */
+@media screen and (max-width: 768px) {
+    .content-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-placeholder,
+    .about-us {
+        width: 100%;
+        margin: 0;
+    }
+
+    .image-placeholder {
+        margin-bottom: 30px;
+    }
+}
