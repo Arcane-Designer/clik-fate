@@ -164,7 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
             submitButton.disabled = true;
     
             // Send email using EmailJS
-            emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
+            emailjs.send('service_olkx64w', 'template_rb9tsjs', {
                 email: emailInput.value
             })
             .then((response) => {
