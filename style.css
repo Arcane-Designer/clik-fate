@@ -493,3 +493,39 @@ footer {
     box-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
     background-color: rgba(46, 46, 46, 1);
 }
+
+/* Submission Animation */
+.submitted {
+    animation: glowPulse 2s ease-in-out;
+}
+
+@keyframes glowPulse {
+    0% {
+        box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(255, 215, 0, 1);
+    }
+    100% {
+        box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+    }
+}
+
+/* Thank You Message Styling */
+.thank-you-message {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #ffa726;
+    text-shadow: 0px 0px 10px rgba(255, 140, 0, 0.8),
+                 0px 0px 20px rgba(255, 87, 34, 0.6);
+    animation: messageFadeIn 2s ease-in-out;
+}
+
+@keyframes messageFadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
