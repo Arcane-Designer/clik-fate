@@ -138,10 +138,6 @@ document.addEventListener('DOMContentLoaded', () => {
             .then((response) => {
                 console.log('SUCCESS!', response.status, response.text);
 
-                // Add animation class
-                submitButton.classList.add('submitted');
-                emailInput.classList.add('submitted');
-
                 // Clear the input field
                 emailInput.value = '';
                 
