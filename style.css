@@ -296,24 +296,17 @@ footer {
     z-index: 1;
 }
 
-/* Image Placeholder */
-.image-placeholder {
+/* Image Container */
+.image-container {
     width: 40%;
-    height: 500px; /* Adjust height as needed */
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 2px dashed #FFD700; /* Golden dashed border */
-    border-radius: 10px;
     margin-right: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
-.image-placeholder::after {
-    content: "Image Placeholder";
-    color: #FFD700;
-    font-family: 'Cinzel Decorative', serif;
-    font-size: 1.5em;
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
 }
 
 /* About Us Section */
