@@ -104,8 +104,8 @@ body {
 
 /* Header Styling */
 header {
-    margin-top: 70px; /* Reduced from 80px */
-    margin-bottom: 20px; /* Added margin below the header */
+    margin-top: 50px; /* Reduced from 80px */
+    margin-bottom: 10px; /* Added margin below the header */
     color: #fff;
     text-align: center; /* Center the text, if not already centered */
     position: relative;
