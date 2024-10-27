@@ -179,7 +179,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 window.location.href = 'thankyou.html';
             }, (error) => {
                 console.log('FAILED...', error);
-                alert('An error occurred while submitting the form. Please try again.');
+                document.getElementById('error-message').style.display = 'block';
                 submitButton.disabled = false;
                 submitButton.textContent = 'Submit';
             });
