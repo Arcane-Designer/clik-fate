@@ -128,9 +128,6 @@ document.addEventListener('DOMContentLoaded', () => {
         joinForm.addEventListener('submit', (e) => {
             e.preventDefault(); // Prevent actual form submission
 
-            // Disable the submit button to prevent multiple submissions
-            submitButton.disabled = true;
-
             // Prepare the template parameters
             const templateParams = {
                 email: emailInput.value
