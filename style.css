@@ -566,11 +566,15 @@ footer {
 /* Thank You Container */
 .thank-you-container {
     margin-top: 150px;
+    margin-left: auto;    /* Center the container horizontally */
+    margin-right: auto;   /* Center the container horizontally */
+    max-width: 800px;     /* Set a maximum width */
     text-align: center;
     color: #e0e0e0;
     font-family: 'Uncial Antiqua', serif;
     position: relative;
     z-index: 1;
+    padding: 0 20px;      /* Optional: Add padding on the sides */
 }
 
 .thank-you-container h1 {
