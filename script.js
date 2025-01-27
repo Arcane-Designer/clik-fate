@@ -114,7 +114,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Fortunes Array
         const fortunes = [
-            // ... fortunes array remains the same ...
+          { text: "The %emoji% reveals your path to %search% shall be paved with glitches", hex: "4D483C" },
+          { text: "Your %spirit-animal% demands you embrace the chaos of %search%", hex: "FF00FF" },
+          { text: "%search% will manifest through digital rituals in %emoji% moons", hex: "00FF00" },
+          { text: "The algorithm decrees: %search% OR PERISH IN %emoji%", hex: "0000FF" }
         ];
 
         // Generate Fortune
