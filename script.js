@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Sites to choose from (adding variety)
         const sites = [
           "https://www.coolmathgames.com/",
+          "https://neal.fun/password-game/",
           "https://www.nytimes.com/games/wordle/index.html",
           "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
           "https://www.youtube.com/@AIMonday",
