@@ -203,4 +203,5 @@ document.addEventListener('DOMContentLoaded', () => {
       selectedEmoji = null;
     });
   }
+    
 });
