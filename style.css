@@ -646,3 +646,135 @@ footer {
     color: #fff;
     background-color: rgba(255, 215, 0, 0.2); /* Hover effect */
 }
+
+/* ===== ORACLE PAGE STYLES ===== */
+.oracle-container {
+  margin: 100px auto 50px;
+  width: 80%;
+  max-width: 600px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.oracle-container h1 {
+  font-family: 'Cinzel Decorative', serif;
+  color: #FFD700;
+  text-shadow: 0 0 15px rgba(255, 215, 0, 0.7);
+  font-size: 2.5em;
+}
+
+.subtitle {
+  color: #e0e0e0;
+  font-family: 'Uncial Antiqua', serif;
+  margin-bottom: 40px;
+}
+
+.oracle-form {
+  background: rgba(46, 46, 46, 0.8);
+  padding: 30px;
+  border-radius: 15px;
+  border: 2px solid #FF5722;
+  box-shadow: 0 0 30px rgba(255, 87, 34, 0.4);
+}
+
+.input-group {
+  margin-bottom: 25px;
+}
+
+.input-group label {
+  display: block;
+  color: #ffa726;
+  margin-bottom: 10px;
+  font-family: 'Uncial Antiqua', serif;
+}
+
+select, #google-search {
+  width: 100%;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid #FF5722;
+  color: #fff;
+  border-radius: 8px;
+  font-family: 'Uncial Antiqua', serif;
+}
+
+.emoji-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.emoji-btn {
+  background: none;
+  border: 2px solid #FF5722;
+  border-radius: 8px;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.emoji-btn:hover {
+  background: rgba(255, 87, 34, 0.2);
+  transform: scale(1.1);
+}
+
+.emoji-btn.selected {
+  background: #FF5722;
+  box-shadow: 0 0 15px #FF5722;
+}
+
+#reveal-fate-btn, #try-again-btn {
+  background: #FF5722;
+  color: #fff;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Cinzel Decorative', serif;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#reveal-fate-btn:hover, #try-again-btn:hover {
+  background: #e64a19;
+  box-shadow: 0 0 25px rgba(255, 87, 34, 0.8);
+}
+
+/* Result Container */
+.result-container {
+  margin-top: 30px;
+}
+
+.terminal-screen {
+  background: rgba(0, 0, 0, 0.9);
+  border: 3px solid #FFD700;
+  padding: 25px;
+  border-radius: 12px;
+  min-height: 150px;
+}
+
+.glitch-text {
+  color: #00ff00;
+  font-family: monospace;
+  font-size: 1.2em;
+  animation: glitch 1s infinite;
+}
+
+.hex-code {
+  color: #FF5722;
+  font-family: 'Uncial Antiqua', serif;
+  margin-top: 15px;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes glitch {
+  0% { text-shadow: 2px 2px #ff00ff, -2px -2px #00ffff; }
+  50% { text-shadow: -2px -2px #ff00ff, 2px 2px #00ffff; }
+  100% { text-shadow: 2px 2px #ff00ff, -2px -2px #00ffff; }
+}
