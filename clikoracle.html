@@ -1,3 +1,5 @@
+arcane, here’s an updated clikoracle.html that you can copy directly. It includes the bigger dropdown, all ten spirit animals, and two rows of ten total emojis. No fortune logic is included here yet, so you can handle the actual answers in script.js or wherever you prefer.
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,28 +30,41 @@
 
     <div class="oracle-form">
       <div class="input-group">
-        <label>Digital Spirit Animal:</label>
-        <select id="spirit-animal">
+        <label>Digital Spirit Animal</label>
+        <select id="spirit-animal" style="font-size:1.2em;">
           <option value="glitchy_cat">Glitchy Cat</option>
           <option value="wifi_wolf">WiFi Wolf</option>
           <option value="error_pigeon">Error 404 Pigeon</option>
           <option value="data_raven">Data Raven</option>
+          <option value="meme_monkey">Meme Monkey</option>
+          <option value="quantum_koala">Quantum Koala</option>
+          <option value="cypher_cerberus">Cypher Cerberus</option>
+          <option value="pixel_pegasus">Pixel Pegasus</option>
+          <option value="spam_skunk">Spam Skunk</option>
+          <option value="trojan_tiger">Trojan Tiger</option>
         </select>
       </div>
 
       <div class="input-group">
-        <label>Last Google Search:</label>
-        <input type="text" id="google-search" placeholder="e.g., 'how to tell if i'm a wizard'">
+        <label>Last Google Search</label>
+        <input type="text" id="google-search" placeholder="how to tell if i'm a wizard">
       </div>
 
       <div class="input-group">
-        <label>Cursed Emoji:</label>
-        <div class="emoji-grid">
+        <label>Cursed Emoji</label>
+        <div class="emoji-grid" style="grid-template-columns: repeat(5, 1fr);">
           <button class="emoji-btn" data-emoji="💀">💀</button>
           <button class="emoji-btn" data-emoji="🌈">🌈</button>
           <button class="emoji-btn" data-emoji="🤖">🤖</button>
           <button class="emoji-btn" data-emoji="🍕">🍕</button>
           <button class="emoji-btn" data-emoji="👾">👾</button>
+        </div>
+        <div class="emoji-grid" style="grid-template-columns: repeat(5, 1fr); margin-top:10px;">
+          <button class="emoji-btn" data-emoji="🐉">🐉</button>
+          <button class="emoji-btn" data-emoji="⚡">⚡</button>
+          <button class="emoji-btn" data-emoji="🔮">🔮</button>
+          <button class="emoji-btn" data-emoji="🦾">🦾</button>
+          <button class="emoji-btn" data-emoji="🕳️">🕳️</button>
         </div>
       </div>
 
