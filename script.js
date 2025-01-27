@@ -151,10 +151,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     
-});
-
-// ===== ORACLE GAME LOGIC ===== //
-document.addEventListener('DOMContentLoaded', () => {
   // Only run on Oracle page
   if (window.location.pathname.includes('clikoracle.html')) {
     const emojiBtns = document.querySelectorAll('.emoji-btn');
