@@ -152,3 +152,59 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
 });
+
+// ===== ORACLE GAME LOGIC ===== //
+document.addEventListener('DOMContentLoaded', () => {
+  // Only run on Oracle page
+  if (window.location.pathname.includes('clikoracle.html')) {
+    const emojiBtns = document.querySelectorAll('.emoji-btn');
+    let selectedEmoji = null;
+    const fateBtn = document.getElementById('reveal-fate-btn');
+    const tryAgainBtn = document.getElementById('try-again-btn');
+    const fortuneText = document.getElementById('fortune-text');
+    const hexCodeSpan = document.getElementById('hex-code');
+
+    // Emoji Selection
+    emojiBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        emojiBtns.forEach(b => b.classList.remove('selected'));
+        e.target.classList.add('selected');
+        selectedEmoji = e.target.dataset.emoji;
+      });
+    });
+
+    // Fortunes Array (Expand this later!)
+    const fortunes = [
+      { text: "Beware the WiFi Wolf... your search for '%search%' will summon chaos (%emoji%). The algorithm decrees: reboot at 3:42 AM.", hex: "CHA0S-7B3E", type: "bad" },
+      { text: "The Glitchy Cat blesses you! %emoji% predicts: tomorrow's reality will render... suspiciously stable.", hex: "H0P3-5A2F", type: "good" },
+      { text: "ERROR 404: Fate not found. Retry after consuming %emoji%.", hex: "NULL-0000", type: "neutral" },
+      // Add more fortunes here!
+    ];
+
+    // Generate Fortune
+    fateBtn.addEventListener('click', () => {
+      if (!selectedEmoji) return alert("Choose an emoji!");
+      const searchTerms = document.getElementById('google-search').value;
+      const spiritAnimal = document.getElementById('spirit-animal').value;
+
+      const fortune = fortunes[Math.floor(Math.random() * fortunes.length)];
+      let output = fortune.text
+        .replace('%search%', searchTerms || "???")
+        .replace('%emoji%', selectedEmoji);
+
+      // Display Result
+      document.querySelector('.oracle-form').classList.add('hidden');
+      document.querySelector('.result-container').classList.remove('hidden');
+      fortuneText.textContent = output;
+      hexCodeSpan.textContent = fortune.hex;
+    });
+
+    // Reset Game
+    tryAgainBtn.addEventListener('click', () => {
+      document.querySelector('.oracle-form').classList.remove('hidden');
+      document.querySelector('.result-container').classList.add('hidden');
+      emojiBtns.forEach(b => b.classList.remove('selected'));
+      selectedEmoji = null;
+    });
+  }
+});
