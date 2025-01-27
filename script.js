@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     // Oracle Page Functionality
-    if (window.location.pathname.includes('clikoracle.html')) {
+    if (window.location.pathname.endsWith('clikoracle.html')) {
         const emojiBtns = document.querySelectorAll('.emoji-btn');
         const fateBtn = document.getElementById('reveal-fate-btn');
         const tryAgainBtn = document.getElementById('try-again-btn');
